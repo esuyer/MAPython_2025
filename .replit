@@ -23,6 +23,6 @@ outputType = "vnc"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "python turtle_shapes.py"
+args = "python l2_es_user_input.py"
 
 [nix]
