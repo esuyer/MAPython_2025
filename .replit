@@ -23,4 +23,6 @@ outputType = "console"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "python l2_es_user_input.py"
+args = "python turtle_shapes.py"
+
+[nix]
