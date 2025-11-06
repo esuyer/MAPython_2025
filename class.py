@@ -1,6 +1,7 @@
 import random
 import turtle
 
+
 def problem1():
     num1 = random.randint(1, 10)
     num2 = random.randint(1, 10)
@@ -8,15 +9,18 @@ def problem1():
     print(num2)
     print("Sum =", num1 + num2, "Difference =", num1 - num2)
 
+
 def problem2():
     count = int(input("How many smileys do you want? "))
     for i in range(count):
         print(":)")
 
+
 def problem3():
     rolls = int(input("How many times should I roll the die? "))
     for i in range(rolls):
         print("Rolled", random.randint(1, 6))
+
 
 def problem4():
     t = turtle.Turtle()
@@ -30,6 +34,7 @@ def problem4():
         t.forward(side + 20)
         t.pendown()
     turtle.done()
+
 
 def problem5():
     t = turtle.Turtle()
@@ -45,6 +50,7 @@ def problem5():
         t.pendown()
     turtle.done()
 
+
 def problem6():
     t = turtle.Turtle()
     t.speed(5)
@@ -58,6 +64,7 @@ def problem6():
         t.forward(100)
         t.right(60)
     turtle.done()
+
 
 while True:
     print("1. Random numbers")
