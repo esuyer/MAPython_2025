@@ -2,6 +2,11 @@ N=int(input("enter a number"))
 if N==12:
     print("dozen")
 
+temp=35
+if temp<=32:
+    print("it's freezing")
+else:
+    print("Im going outside")
 
 
 
