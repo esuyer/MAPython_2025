@@ -29,9 +29,9 @@
 
 In=42
 if In==12:
-  print("Integer is equal to 12")
+  print("Dozen!")
 else:
-   print("Integer is not equal to 12")
+   print("Not a Dozen😭")
 
 Temp=10
 if Temp<32:
@@ -40,5 +40,34 @@ else:
    print("I will go outside today")
 
 
-If
+Day=1
+if Day==1:
+  print("sunday")
+elif Day==7:
+    print("saturday")
+else:
+     print("weekday")
 
+
+
+
+Num=10
+if Num%2==0:
+  print("Num is even")
+else:
+  print("Num is odd")
+
+
+N=165789
+if N % 5==0:
+  print("N is divisible by 5")
+else:
+   print("N is not divisible by 5")
+
+X=10
+y=50
+
+if X+Y>20:
+  print("We can buy cake!")
+else:
+   print("Not ebnough money")
