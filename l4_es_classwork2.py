@@ -20,3 +20,6 @@ n = 5
 if n % 5 == 0:
    print("n is divisible by 5")
   
+if (n % 2 == 1):
+  print("n is odd")
+
