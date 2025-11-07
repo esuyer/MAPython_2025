@@ -17,6 +17,6 @@ else:
   print("weekday")
 
 n = 5
-if is.integert(5/5):
+if n % 5 == 0:
    print("n is divisible by 5")
   
