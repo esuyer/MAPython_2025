@@ -22,3 +22,12 @@ for i in range(5):
     print(f"Random number {i+1}: {random_number}")
 print("Question 4")
 print("")
+t= turtle.Turtle()
+t.speed(5)
+for i in range(5):
+    side=random.randint(50,200)
+    for j in range(5):
+        t.forward(side)
+        t.left(120)
+
+turtle.done()
