@@ -50,7 +50,6 @@ a = b
 b = c
 print("Swapped:")
 print(a,b)
-
 c = int(input("candies: "))
 k = int(input("kids: "))
 print(0 if c % k == 0 else k - c % k)
