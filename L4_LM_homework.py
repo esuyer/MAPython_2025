@@ -50,5 +50,5 @@ print("Question 6")
 print("")
 candy=int(input("How many candies do you have?"))
 kids=int(input("How many kids are there?"))
-answer=kids%candy
-print("each kid will have",answer,"candies")
+answer=candy%kids
+print("There will be",answer,"kids without candy")
