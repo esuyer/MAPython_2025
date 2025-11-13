@@ -4,7 +4,7 @@ num2 = int(input("Enter another number: "))
 if num1 > num2:
   print(num2)
 elif num2 == num1:
-  print(num1)
+  print(num1)   
 else:
  print(num1)
 num3 = int(input("Enter a number: "))
@@ -18,15 +18,14 @@ else:
 age = int(input("How old are you? "))
 if age < 2:
       print("The cost of the ticket is 0")
-else:
- if age <= 15:
+elif age < 15:
           print("The cost of the ticket is 5")
- else:
+else:
           print("The cost of the ticket is 8")
 
 print("We roll a 6 sided die")
 roll = random.randint(1, 6)
-if roll == 3:
+if roll > 3:
    print("You need to do homework!")
 else:
    print("You are having lunch!")
@@ -50,6 +49,6 @@ a = b
 b = c
 print("Swapped:")
 print(a,b)
-c = int(input("candies: "))
-k = int(input("kids: "))
+c = int(input("Candies: "))
+k = int(input("Kids: "))
 print(0 if c % k == 0 else k - c % k)
