@@ -20,7 +20,7 @@ author = "agent"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "python L4_LM_homework.py"
+args = "python L5_LM_challenge.py"
 
 [workflows.workflow.metadata]
 outputType = "console"
