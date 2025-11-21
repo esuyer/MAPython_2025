@@ -7,4 +7,8 @@ for i in range(1, n):
     print(i)
 
 for i in range(n):
-  print (2^i)
+  print (2**i)
+
+for i in range(n):
+   if 
+
