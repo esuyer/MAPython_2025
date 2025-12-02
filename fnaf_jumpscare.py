@@ -17,14 +17,38 @@ BLACK = (0, 0, 0)
 RED = (255, 0, 0)
 DARK_RED = (100, 0, 0)
 
+# ============================================================
+# SOUND FILE - Add your jumpscare sound here!
+# ============================================================
+# To add sound:
+# 1. Upload a sound file (like "scream.wav" or "scream.mp3")
+#    to your project folder
+# 2. Change the filename below to match your file
+# 3. Note: Sound works when running locally with audio support
+#
+# The sound will play at the start and loop with each jumpscare cycle
+
+SOUND_FILE = "scream.wav"  # <-- CHANGE THIS TO YOUR SOUND FILE
+
+# ============================================================
+
+jumpscare_sound = None
+try:
+    pygame.mixer.init()
+    jumpscare_sound = pygame.mixer.Sound(SOUND_FILE)
+    print(f"Sound loaded successfully: {SOUND_FILE}")
+except Exception as e:
+    print(f"Sound not loaded: {SOUND_FILE}")
+    print("(This is normal in Replit - sound will work when run locally)")
+
 try:
     jumpscare_image = pygame.image.load("jumpscare.png")
     jumpscare_image = pygame.transform.scale(jumpscare_image, (WIDTH, HEIGHT))
 except:
     jumpscare_image = pygame.Surface((WIDTH, HEIGHT))
     jumpscare_image.fill(DARK_RED)
-    font = pygame.font.Font(None, 120)
-    text = font.render("FREDDY", True, BLACK)
+    temp_font = pygame.font.Font(None, 120)
+    text = temp_font.render("FREDDY", True, BLACK)
     jumpscare_image.blit(text, (WIDTH//2 - text.get_width()//2, HEIGHT//2 - text.get_height()//2))
 
 clock = pygame.time.Clock()
@@ -33,6 +57,15 @@ timer = 0
 duration = 120
 shake_intensity = 35
 flash_speed = 3
+
+def play_jumpscare_sound():
+    if jumpscare_sound:
+        try:
+            jumpscare_sound.play()
+        except:
+            pass
+
+play_jumpscare_sound()
 
 running = True
 while running:
@@ -43,6 +76,7 @@ while running:
     timer += 1
     if timer >= duration:
         timer = 0
+        play_jumpscare_sound()
 
     progress = timer / duration
     intensity = shake_intensity * (1 - progress * 0.5)

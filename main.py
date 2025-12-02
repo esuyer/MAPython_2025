@@ -1,4 +1,4 @@
-
+import time
 import random
 print("Question 1 \n")
 x = int(input("Enter an odd number: "))
