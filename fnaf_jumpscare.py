@@ -16,22 +16,7 @@ pygame.display.set_caption("")
 BLACK = (0, 0, 0)
 RED = (255, 0, 0)
 DARK_RED = (100, 0, 0)
-
-# ============================================================
-# SOUND FILE - Add your jumpscare sound here!
-# ============================================================
-# To add sound:
-# 1. Upload a sound file (like "scream.wav" or "scream.mp3")
-#    to your project folder
-# 2. Change the filename below to match your file
-# 3. Note: Sound works when running locally with audio support
-#
-# The sound will play at the start and loop with each jumpscare cycle
-
-SOUND_FILE = "scream.wav"  # <-- CHANGE THIS TO YOUR SOUND FILE
-
-# ============================================================
-
+SOUND_FILE = "hohoho.wav"
 jumpscare_sound = None
 try:
     pygame.mixer.init()
