@@ -18,12 +18,12 @@ args = "Pygame Game"
 name = "Pygame Game"
 author = "agent"
 
-[[workflows.workflow.tasks]]
-task = "shell.exec"
-args = "python game.py"
-
 [workflows.workflow.metadata]
 outputType = "vnc"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python fnaf_jumpscare.py"
 
 [nix]
 channel = "stable-25_05"
