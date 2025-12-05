@@ -10,5 +10,8 @@ for i in range(n):
   print (2**i)
 
 for i in range(n):
-   if 
+   if i % 10 == 3:
+     print(i)
+
+
 
