@@ -1,3 +1,5 @@
+import math
+
 print("Question 1")
 print("")
 start=0
@@ -21,4 +23,12 @@ if num == 1:
   
 print("")
 print("Question 3")
+print("")
+n= int(input("Give me a number"))
+if n %10 ==0:
+  print("The number ends in 0")
+else:
+  print(math.floor(n/10)*10)
+print("")
+print("Question 4")
 print("")
