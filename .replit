@@ -23,7 +23,7 @@ outputType = "vnc"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "python fnaf_jumpscare.py"
+args = "python main.py"
 
 [nix]
 channel = "stable-25_05"
