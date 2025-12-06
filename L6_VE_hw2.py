@@ -5,4 +5,9 @@ for i in range(N,-1,-1):
    print(i)
 print("Boo!!!")
   
-  
+
+
+t=int(input("Enter a number: "))
+for i in range(0,t+1):
+    print(i**2)
+   
