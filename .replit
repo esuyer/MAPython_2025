@@ -23,7 +23,7 @@ outputType = "vnc"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "python 7.py"
+args = "python doom.py"
 
 [nix]
 channel = "stable-25_05"
