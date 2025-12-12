@@ -17,13 +17,14 @@ args = "Pygame Game"
 [[workflows.workflow]]
 name = "Pygame Game"
 author = "agent"
+mode = "parallel"
 
 [workflows.workflow.metadata]
 outputType = "vnc"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "python doom.py"
+args = "python HW8.py"
 
 [nix]
 channel = "stable-25_05"
