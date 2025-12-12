@@ -35,7 +35,7 @@ elif month == 3 and day == 20:
   print("yooo its my bday!!!")
 elif month == 4 and day == 20:
   print("eggs")
-elif month == 5 and day == 4
+elif month == 5 and day == 4:
  print("may the forth be with you")
 elif month == 6:
   print("i couldnt find one for june, instead do july 23")
