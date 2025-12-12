@@ -18,9 +18,11 @@ args = "Python Runner"
 name = "Python Runner"
 author = "agent"
 
+[workflows.workflow.metadata]
+outputType = "vnc"
+
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "python main.py"
+args = "python l2_es_user_input.py"
 
-[workflows.workflow.metadata]
-outputType = "console"
+[nix]
