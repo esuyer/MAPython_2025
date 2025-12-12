@@ -3,3 +3,38 @@ print("")
 def make_fish():
    print("<o))))><")
 make_fish()
+print("")
+print("Question 2")
+print("")
+def say_it(sentence):
+   print(sentence)
+say_it("Nice Bird")
+say_it("tweat tweat")
+say_it("I need food")
+print("")
+print("Question 3")
+print("")
+def Tale(weight):
+  print("I once caught a fish that weighed", weight, "pounds")
+Tale(1000)
+Tale(300)
+print("")
+print("Question 4")
+print("")
+def Num1(N):
+    if N >100:
+      print("Too much work")
+    else:
+       print(N)
+Num1(200)
+Num1(10)
+print("")
+print("Question 5")
+print("")
+def make_it_big(N):
+  return(N*1000000)
+print(make_it_big(2))
+print(make_it_big(70))
+print("")
+print("Question 6")
+print("")
