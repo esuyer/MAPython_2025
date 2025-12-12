@@ -1,3 +1,5 @@
+import math
+
 print("Question 1")
 print("")
 start=0
@@ -22,4 +24,3 @@ if num == 1:
 print("")
 print("Question 3")
 print("")
-
