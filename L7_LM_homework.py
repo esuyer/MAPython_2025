@@ -47,7 +47,7 @@ print("")
 print("Question 5")
 print("")
 N= int(input("Give me a non-negative interger"))
-if N<=2 or N>=8:
+if N % 10 <= 2:
    print("Close")
 else:
    print("Far")
