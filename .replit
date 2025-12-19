@@ -24,7 +24,7 @@ outputType = "vnc"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "python HW8.py"
+args = "python 9.py"
 
 [nix]
 channel = "stable-25_05"

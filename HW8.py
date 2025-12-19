@@ -1,7 +1,7 @@
 import turtle
 print("Question 1\n")
 def madlib(name, integer, noun):
-  print(f"Congrats to {name} who won place # {integer} in {noun} contest.")
+  print(f"Congrats to {name} who won place # {integer} in the {noun} contest.")
 name = input("Enter a name: ")
 integer = int(input("Enter a number: "))
 noun = input("Enter a noun: ")
