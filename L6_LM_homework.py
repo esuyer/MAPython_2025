@@ -18,7 +18,7 @@ num1=int(input("Give me a number"))
 print(num1,"till you get scared")
 for num in range(num1, 0, -1):
   print(num)
-if num == 1:
+if num1 == 1:
     print("BOO!")
   
 print("")

@@ -26,6 +26,7 @@ A=int(input("Give me a positive interger: "))
 B=int(input("Give me a bigger interger: "))
 count = 0
 def mult_7(A, B):
+  global count
   for num in range(A, B + 1):
     if num % 7 == 0: 
       print(num)
