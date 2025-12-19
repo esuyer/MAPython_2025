@@ -19,7 +19,7 @@ if Age<=2:
     print("The price of the ticket is $0")
 print("Question 3")
 print("We rolled a six sidded dice")
-roll = random.randint  (1,6)
+roll = random.randint(1,6)
 if  roll > 3:
     print("You are doing homework!")
 else:

@@ -1,7 +1,8 @@
 import turtle
+import random
+
 print("Question 1")
 print("")
-random=__import__("random")
 ran_num1=random.randint(1,10)
 ran_num2=random.randint(1,10)
 print(ran_num1,ran_num2)
@@ -14,10 +15,9 @@ for i in range(smile):
     print("\U0001f600")
 print("Question 3")
 print("")
-dice=(input("how many times do you want to roll the dice?"))
+dice=int(input("how many times do you want to roll the dice?"))
 
-
-for i in range(5):
+for i in range(dice):
     random_number = random.randint(1, 6)
     print(f"Random number {i+1}: {random_number}")
 print("Question 4")
