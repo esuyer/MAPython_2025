@@ -45,3 +45,13 @@ else:
   count = (last_even - first_even) // 2 + 1
   total_sum = (count * (first_even + last_even)) // 2
 print("Sum of even numbers between", Num1, "and", Num2, "is:", total_sum)
+print("")
+print("Question 4")
+print("")
+def sum_squares(N):
+  total_sum = 0
+  for i in range(1, N + 1):
+      total_sum += i**2
+  print(total_sum)
+sum_squares(5)
+sum_squares(10)
