@@ -24,12 +24,24 @@ print("Question 2")
 print("")
 A=int(input("Give me a positive interger: "))
 B=int(input("Give me a bigger interger: "))
-count = 0
 def mult_7(A, B):
-  global count
+  count = 0
   for num in range(A, B + 1):
     if num % 7 == 0: 
       print(num)
       count += 1
+  print("There are", count, "numbers divisible by 7")
 mult_7(A, B)
-print("There are", count, "numbers divisible by 7")
+print("")
+print("Question 3")
+print("")
+Num1=int(input("Give me a positive number: "))
+Num2=int(input("Give me a bigger number: "))
+first_even = Num1 if Num1 % 2 == 0 else Num1 + 1
+last_even = Num2 if Num2 % 2 == 0 else Num2 - 1
+if first_even > last_even:
+    total_sum = 0
+else:
+  count = (last_even - first_even) // 2 + 1
+  total_sum = (count * (first_even + last_even)) // 2
+print("Sum of even numbers between", Num1, "and", Num2, "is:", total_sum)
