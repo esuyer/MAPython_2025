@@ -5,26 +5,7 @@ import pygame
 import random
 import sys
 import math
-import time
-import turtle
-print("Question 1 \n")
-x = int(input("Enter an odd number: "))
-for x in range(1, x+2):
- if x % 2 != 0:
-    print(x, end=" ""\n")
-print("-"*10)
-for x in range(0, x+0):
-  print(x**2)
-print("\nQuestion 2 \n")
-y = random. randint(3, 10)
-print("You will get scared in ", y," seconds")
-for y in range(y, 1, -1):
-   time. sleep(1)
-   print(y)
-time. sleep(1)
-print("1")
-time. sleep(1)
-print("BOO!")
+
 pygame.init()
 
 WIDTH = 800
@@ -36,7 +17,7 @@ BLACK = (0, 0, 0)
 RED = (255, 0, 0)
 DARK_RED = (100, 0, 0)
 SOUND_FILE = "hohoho.wav"
-jumpscare_sound = SOUND_FILE
+jumpscare_sound = None
 try:
     pygame.mixer.init()
     jumpscare_sound = pygame.mixer.Sound(SOUND_FILE)
@@ -109,39 +90,7 @@ while running:
         screen.blit(flash_surface, (0, 0))
 
     pygame.display.flip()
-    clock.tick(10)
+    clock.tick(60)
 
-print("\nQuestion 3 \n")
-z = int(input("Enter a number: "))
-z = (z // 10) * 10
-print(z)
-print("\nQuestion 4 \n")
-pen = turtle.Pen()
-pen.shape("turtle")
-pen.hideturtle()
-pen.up()
-N = random.randint(5,10)
-print(N)
-for i in range(N):
-    if i % 2 == 0:
-        pen.color("red")
-    else:
-        pen.color("green")
-    pen.stamp()
-    pen.forward(50)
-time.sleep(5)
-turtle.clear()
-colors = ["purple", "yellow", "blue"]
-for i in range(N):
-        pen.color(colors[i % 3])
-        pen.stamp()
-        pen.forward(50)
-turtle.done()
-print("\nQuestion 5 \n")
-S = int(input())
-hours = S // 3600
-minutes = (S % 3600) // 60
-seconds = S % 60
-print("hours:", hours, "minutes:", minutes, "seconds:", seconds)
 pygame.quit()
 sys.exit()
