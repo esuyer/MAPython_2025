@@ -1,30 +1,24 @@
 import os
 os.environ['SDL_AUDIODRIVER'] = 'dummy'
-
 import pygame
-import random
-import sys
-import math
 
 pygame.init()
 
 WIDTH = 800
 HEIGHT = 600
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("")
 
 BLACK = (0, 0, 0)
 RED = (255, 0, 0)
 DARK_RED = (100, 0, 0)
 SOUND_FILE = "hohoho.wav"
 jumpscare_sound = None
+
 try:
     pygame.mixer.init()
     jumpscare_sound = pygame.mixer.Sound(SOUND_FILE)
-    print(f"Sound loaded successfully: {SOUND_FILE}")
-except Exception as e:
-    print(f"Sound not loaded: {SOUND_FILE}")
-    print("(This is normal in Replit - sound will work when run locally)")
+except:
+    pass
 
 try:
     jumpscare_image = pygame.image.load("jumpscare.png")
@@ -37,7 +31,6 @@ except:
     jumpscare_image.blit(text, (WIDTH//2 - text.get_width()//2, HEIGHT//2 - text.get_height()//2))
 
 clock = pygame.time.Clock()
-
 timer = 0
 duration = 120
 shake_intensity = 35
@@ -64,13 +57,12 @@ while running:
         play_jumpscare_sound()
 
     progress = timer / duration
-    intensity = shake_intensity * (1 - progress * 0.5)
-    shake_x = random.randint(-int(intensity), int(intensity))
-    shake_y = random.randint(-int(intensity), int(intensity))
+    # Manual simple pseudo-random for shake using timer
+    shake_x = (timer * 13) % (int(shake_intensity * 2) + 1) - int(shake_intensity)
+    shake_y = (timer * 17) % (int(shake_intensity * 2) + 1) - int(shake_intensity)
 
-    zoom = 1.0 + math.sin(progress * math.pi) * 0.2
-    rapid_zoom = 1.0 + math.sin(timer * 0.5) * 0.08
-    scale = zoom * rapid_zoom
+    # Simple scaling without math.sin
+    scale = 1.0 + (timer % 30) / 100.0
 
     screen.fill(BLACK)
 
@@ -93,4 +85,3 @@ while running:
     clock.tick(60)
 
 pygame.quit()
-sys.exit()
