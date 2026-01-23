@@ -24,7 +24,7 @@ outputType = "vnc"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "python geometry_dash.py"
+args = "python geo.py"
 
 [nix]
 channel = "stable-25_05"
