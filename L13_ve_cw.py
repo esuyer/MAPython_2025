@@ -38,4 +38,4 @@ else:
    print("Magenta is not in the list")
 
 for i in range(len(favcolors)):
-   print(favcolors[i])
+   print(i + 1, ":", favcolors[i])
