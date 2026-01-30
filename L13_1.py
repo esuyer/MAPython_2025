@@ -114,8 +114,139 @@ for i in range(len(pet_types)):
   
 print(pet_info)
   
-  
+"""
+Problem 7. 0 to N
+Ask the user for a positive integer N. Create a list that contains all integers from 0 to N (inclusive).
+Print the list.
+Example:
+Give me an integer: 10
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Tip: start with an empty list.
+"""  
+print  ("Problem 7")
+n = int(input("Give me an integer: "))
+numbers = []
+for i in range(n+1):
+   numbers.append(i)
 
+print(numbers)
 
+"""
+Problem 8. Trip planner
+Create a list of 5 city names of your choice for the user to visit. Print the list.
+Ask the user if they want to make any changes.
+If the user’s answer is “yes”, your program should do the following:
+ Ask the user for an integer number between 0 and 4 (inclusive), N.
+ Ask the user for a new destination.
+ Change the city in the list that stands at position N to the destination that the user entered.
+ Print the changed list.
+Examples:
+[&#39;New York&#39;, &#39;Paris&#39;, &#39;Seattle&#39;, &#39;Tokyo&#39;, &#39;Moscow&#39;]
+Do you want to make any changes to your trip? yes
+Give me an integer between 0 and 4: 2
+Give me a new destination: London
+[&#39;New York&#39;, &#39;Paris&#39;, &#39;London&#39;, &#39;Tokyo&#39;, &#39;Moscow&#39;]
+&#39;Tokyo&#39;, &#39;Moscow&#39;]
+"""
+print  ("Problem 8")
+cities = ['New York', 'Paris', 'Seattle', 'Tokyo', 'Moscow']
+print(cities)
+answer = input("Do you want to make any changes to your trip? ")
+if answer == "yes":
+   n = int(input("Give me an integer between 0 and 4: "))
+   new_destination = input("Give me a new destination: ")
+   cities[n] = new_destination
+   print(cities)
 
-  
+"""
+Problem 9. Split the line
+You are given a list of names – people standing in line to a ticket booth. Another
+ticket booth just opened, and your job is to split the original line into two as fair as
+possible – the people at even positions go to one line and the people at odd
+positions go to another.
+Write a function with one parameter: a list of names. This function should create and print two new
+lists – names of people in two new lines. Your function should not change the original list.
+
+Examples:
+Function call Output
+split_line([&#39;Joe&#39;, &#39;Ann&#39;, &#39;Bob&#39;, &#39;Kathy&#39;, &#39;Mary&#39;, &#39;Billy&#39;]) [&#39;Joe&#39;, &#39;Bob&#39;, &#39;Mary&#39;]
+[&#39;Ann&#39;, &#39;Kathy&#39;, &#39;Billy&#39;]
+split_line([&#39;Tony&#39;, &#39;Sam&#39;, &#39;Mike&#39;]) [&#39;Tony&#39;, &#39;Mike&#39;]
+
+[&#39;Sam&#39;]
+"""
+print  ("Problem 9")
+def split_line(names):
+   line1 = []
+   line2 = []  
+   for i in range(len(names)):
+      if i % 2 == 0:
+         line1.append(names[i])
+      else:
+         line2.append(names[i])
+
+   print(line1)
+   print(line2)
+
+split_line(['Joe', 'Ann', 'Bob', 'Kathy', 'Mary', 'Billy'])
+split_line(['Tony', 'Sam', 'Mike'])
+
+"""
+Problem 10. Merge the lines (challenge)
+
+Prime Factor Math Circle 2024-2025
+
+© 2024 Prime Factor Math Circle. Property of Prime Factor Math Circle.
+You are given two lists of names – people standing in line to two ticket booths. The second ticket
+booth just closed, and your job is to merge the original lines into one as fair as possible:
+ the 1 st person from the 1 st line
+ the 1 st person from the 2 nd line
+ the 2 nd person from the 1 st line
+ the 2 nd person from the 2 nd line
+ and so on.
+If one line is longer that the other, the remaining people from that line should go to the end of the new
+line in the same order they were in the original line.
+Write a function with two parameters: two lists of names. This function should create and print a new
+list – names of people in the new line. Your function should not change the original two lists.
+Examples:
+Function call Output
+merge_lines([&#39;Ann&#39;, &#39;Andrew&#39;, &#39;Alice&#39;, &#39;Alex&#39;, &#39;Arie&#39;],
+[&#39;Bob&#39;, &#39;Ben&#39;])
+
+[&#39;Ann&#39;, &#39;Bob&#39;, &#39;Andrew&#39;, &#39;Ben&#39;,
+&#39;Alice&#39;, &#39;Alex&#39;, &#39;Arie&#39;]
+
+merge_lines([&#39;Bob&#39;, &#39;Ben&#39;],
+[&#39;Ann&#39;, &#39;Andrew&#39;, &#39;Alice&#39;, &#39;Alex&#39;, &#39;Arie&#39;])
+
+[&#39;Bob&#39;, &#39;Ann&#39;, &#39;Ben&#39;, &#39;Andrew&#39;,
+&#39;Alice&#39;, &#39;Alex&#39;, &#39;Arie&#39;]
+
+merge_lines([&#39;Bob&#39;, &#39;Ben&#39;, &#39;Bettany&#39;],
+[&#39;Ann&#39;, &#39;Andrew&#39;, &#39;Alice&#39;])
+
+[&#39;Bob&#39;, &#39;Ann&#39;, &#39;Ben&#39;, &#39;Andrew&#39;,
+&#39;Bettany&#39;, &#39;Alice&#39;]
+"""
+
+print  ("Problem 10")
+def merge_lines(line1, line2):
+   new_line = []
+   for i in range(len(line1)):
+      new_line.append(line1[i])
+      if i < len(line2):
+         new_line.append(line2[i])
+
+   if len(line2) > len(line1):
+      for i in range(len(line1), len(line2)):
+         new_line.append(line2[i])
+
+   print(new_line)
+
+merge_lines(['Ann', 'Andrew', 'Alice', 'Alex', 'Arie'], ['Bob', 'Ben'])
+merge_lines(['Bob', 'Ben'], ['Ann', 'Andrew', 'Alice', 'Alex', 'Arie'])
+merge_lines(['Bob', 'Ben', 'Bettany'], ['Ann', 'Andrew', 'Alice'])
+merge_lines(['Ann', 'Andrew', 'Alice', 'Alex', 'Arie'], ['Bob', 'Ben', 'Bettany'])
+merge_lines(['Bob', 'Ben', 'Bettany'], ['Ann', 'Andrew', 'Alice', 'Alex', 'Arie'])
+merge_lines(['Bob', 'Ben', 'Bettany', 'Beth'], ['Ann', 'Andrew', 'Alice', 'Alex', 'Arie'])
+merge_lines(['Ann', 'Andrew', 'Alice', 'Alex', 'Arie'], ['Bob', 'Ben', 'Bettany', 'Beth'])
