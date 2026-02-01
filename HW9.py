@@ -1,57 +1,66 @@
-def problem1():
-    print("Problem 1")
-    print()
-    word = input("Give me a word: ")
-    for c in word:
-        if c == 'a' or c == 'A':
-            print(c)
+import os
+# Audio fix for turtle/headless environments
+os.environ['SDL_AUDIODRIVER'] = 'dummy'
+import turtle
 
-def chain(w1, w2):
-    print("Problem 2")
-    print()
-    if w1[0] == w2[-1]:
-        print(w2, w1)
-    elif w2[0] == w1[-1]:
-        print(w1, w2)
-    else:
-        print("NO CHAIN")
+print("Problem 1\n")
+nums = []
+for _ in range(5):
+    nums.append(int(input("Give me a number: ")))
 
-def problem3():
-    print("Problem 3")
-    print()
-    w1 = input("Give me a word: ")
-    w2 = input("Give me another word: ")
-    if w1[-2:] == w2[-2:]:
-        print(w1, "and", w2, "rhyme")
-    else:
-        print(w1, "and", w2, "DO NOT rhyme")
+print("First plus last: ", nums[0] + nums[-1])
+for n in nums:
+    print(n)
 
-def secret_message(a, b):
-    print("Problem 4")
-    print()
-    for i in range(len(a)):
-        print(a[i])
-        print(b[i])
+print("Odd numbers only: ")
+for n in nums:
+    if n % 2 == 1:
+        print(n)
 
-def problem5():
-    print("Problem 5")
-    print()
-    word = input("Give me a word: ")
-    for i in range(len(word)):
-        print("." * i + word[i])
+print("\nProblem 2\n")
+friends = []
+f_count = int(input("How many friends do you want to invite: "))
+for _ in range(f_count):
+    name = input("Enter a name: ")
+    friends.append(name)
+print(friends)
 
-problem1()
-print()
-chain('dog','toad')
-print()
-chain('cat','take')
-print()
-chain('cake','rat')
-print()
-problem3()
-print()
-secret_message('Pto','yhn')
-print()
-secret_message('fo','lp')
-print()
-problem5()
+print("\nProblem 3\n")
+multi = []
+h = int(input("Give me a number: "))
+for i in range(h):
+    multi.append("*" * (i + 1))
+print(multi)
+
+print("\nProblem 4\n")
+print("Enter 4 pokemon for Jake:")
+jake = [input(f"Jake's pokemon {i+1}: ") for i in range(4)]
+print("\nEnter 4 pokemon for Andrew:")
+andrew = [input(f"Andrew's pokemon {i+1}: ") for i in range(4)]
+
+print("Jake's pokemon: ", jake)
+print("Andrew's pokemon: ", andrew)
+print("Different pokemon in Jake's list compared to Andrew's at same index: ")
+for i in range(len(jake)):
+    if jake[i] != andrew[i]:
+        print(jake[i])
+
+print("\nProblem 5\n")
+colours = []
+q = int(input("How many colours do you want to enter: "))
+for i in range(q):
+    r = input("Enter a colour: ")
+    colours.append(r)
+
+# Setup turtle
+screen = turtle.Screen()
+t = turtle.Turtle()
+t.speed(0)
+
+for c in colours:
+    t.color(c)
+    t.forward(100)
+    t.stamp()
+
+print("\nDone! Close the turtle window to finish.")
+turtle.done()

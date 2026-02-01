@@ -111,7 +111,7 @@ class Player:
         self.g=1.2
         self.rot=0
         self.mode="cube"
-        self.ground=True
+        self.ground=False
         self.wave_dir=1
     def reset(self):
         self.y=GROUND-self.s
