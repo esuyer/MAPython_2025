@@ -1,7 +1,21 @@
 import os
-# Audio fix for turtle/headless environments
+# Audio fix for headless environments
 os.environ['SDL_AUDIODRIVER'] = 'dummy'
-import turtle
+import pygame
+
+pygame.init()
+
+WIDTH=800
+HEIGHT=600
+screen=pygame.display.set_mode((WIDTH,HEIGHT))
+pygame.display.set_caption("Homework 9")
+clock=pygame.time.Clock()
+
+WHITE=(255,255,255)
+BLACK=(0,0,0)
+RED=(255,0,0)
+
+font=pygame.font.SysFont("arial", 24)
 
 print("Problem 1\n")
 nums = []
@@ -52,15 +66,39 @@ for i in range(q):
     r = input("Enter a colour: ")
     colours.append(r)
 
-# Setup turtle
-screen = turtle.Screen()
-t = turtle.Turtle()
-t.speed(0)
+# Replacement for turtle using Pygame
+print("\nRendering Pygame window for Problem 5 visualization...")
+running = True
+drawn = False
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
 
-for c in colours:
-    t.color(c)
-    t.forward(100)
-    t.stamp()
+    screen.fill(BLACK)
+    
+    # Draw "stamps" for colours
+    x_pos = 100
+    for c_name in colours:
+        try:
+            # Simple color mapping for common turtle colors
+            color = pygame.Color(c_name)
+        except:
+            color = WHITE
+            
+        pygame.draw.circle(screen, color, (x_pos, HEIGHT//2), 20)
+        x_pos += 100
+        if x_pos > WIDTH - 50:
+            break
 
-print("\nDone! Close the turtle window to finish.")
-turtle.done()
+    txt = font.render("Problem 5: Colour Stamps (Pygame Replacement for Turtle)", True, WHITE)
+    screen.blit(txt, (20, 20))
+    
+    pygame.display.flip()
+    clock.tick(60)
+    
+    if not drawn:
+        print("Visualization active in VNC view. Close the window or stop the workflow to exit.")
+        drawn = True
+
+pygame.quit()
