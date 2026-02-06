@@ -22,3 +22,13 @@ print("after ", fruit)
 fruit.remove('tomato')
 print("after remove ", fruit)
 
+fruit.pop()
+print("after pop ", fruit)
+
+f = fruit.pop(1)
+print("after pop(1) ", fruit)
+print("popped item ", f)
+
+fruit.clear()
+print("after clear ", fruit)
+
