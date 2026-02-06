@@ -1,0 +1,11 @@
+Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit (sec),Correct answer(s)
+"What is the output of len([10, 20, 30, 40])?","3","4","5","10",20,2
+"Which method adds an item to the end of a list?","pop()","insert()","append()","remove()",20,3
+"What does numbers.pop() do by default?","Removes the first item","Removes the last item","Adds a new item","Clears the list",20,2
+"How do you access the first element of a list named 'mylist'?","mylist[0]","mylist[1]","mylist.first()","mylist{0}",20,1
+"What is the result of [1, 2] + [3, 4]?","[1, 2, 3, 4]","[[1, 2], [3, 4]]","[4, 6]","Error",20,1
+"Which operator checks if an item exists in a list?","exists","has","in","contains",20,3
+"What does 'numbers.insert(0, 5)' do?","Adds 5 to the end","Replaces the first item with 5","Adds 5 at index 0","Removes index 0",20,3
+"What is the index of the last item in a list of length 5?","5","4","-2","6",20,2
+"How do you remove a specific value (e.g., 20) from a list?","numbers.delete(20)","numbers.pop(20)","numbers.remove(20)","numbers.discard(20)",20,3
+"What happens if you call pop() on an empty list?","Returns None","Returns 0","IndexError","It works normally",20,3
