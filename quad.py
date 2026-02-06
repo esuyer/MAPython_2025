@@ -3,6 +3,7 @@ import random
 import sys
 import terminal
 import time
+print("quadradic equasion solver 1.1")
 print("ax²+bx+c=0")
 a = float(input("a = "))
 terminal.clear()
