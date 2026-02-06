@@ -1,3 +1,6 @@
 W = input("Enter a word: ")
-for i in range(len(W)):
-   print(W[i])
+for letter in W:
+  if letter == 'a':
+    print(letter)
+  elif  letter == 'Ah':
+    print(letter)
