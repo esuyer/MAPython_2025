@@ -18,6 +18,10 @@ args = "Pygame Game"
 task = "workflow.run"
 args = "Tkinter Test"
 
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Turtle Test"
+
 [[workflows.workflow]]
 name = "Pygame Game"
 author = "agent"
@@ -37,6 +41,17 @@ author = "agent"
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "python src/tk_test.py"
+
+[workflows.workflow.metadata]
+outputType = "vnc"
+
+[[workflows.workflow]]
+name = "Turtle Test"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python src/turtle_test.py"
 
 [workflows.workflow.metadata]
 outputType = "vnc"
