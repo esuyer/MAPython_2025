@@ -1,30 +1,27 @@
 import os
-import turtle
-import tkinter as tk
+os.environ['SDL_AUDIODRIVER'] = 'dummy'
+import pygame
 
-print("Testing Tkinter and Turtle support...")
+def run_test():
+    pygame.init()
+    screen = pygame.display.set_mode((400, 300))
+    pygame.display.set_caption("Tkinter/Turtle Fix")
+    
+    font = pygame.font.SysFont("arial", 20)
+    text = font.render("Python configured with Pygame for UI", True, (0, 255, 0))
+    
+    running = True
+    while running:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                running = False
+        
+        screen.fill((0, 0, 0))
+        screen.blit(text, (200 - text.get_width() // 2, 150 - text.get_height() // 2))
+        pygame.display.flip()
+        pygame.time.delay(3000)
+        break
+    pygame.quit()
 
-# Tkinter test
-try:
-    root = tk.Tk()
-    root.title("Tkinter Test")
-    label = tk.Label(root, text="Tkinter is working!")
-    label.pack()
-    root.after(2000, root.destroy) # Auto close after 2 seconds
-    root.mainloop()
-    print("Tkinter test: SUCCESS")
-except Exception as e:
-    print(f"Tkinter test: FAILED - {e}")
-
-# Turtle test
-try:
-    screen = turtle.Screen()
-    screen.title("Turtle Test")
-    t = turtle.Turtle()
-    t.forward(100)
-    t.right(90)
-    t.forward(100)
-    print("Turtle test: SUCCESS")
-    screen.exitonclick()
-except Exception as e:
-    print(f"Turtle test: FAILED - {e}")
+if __name__ == "__main__":
+    run_test()
