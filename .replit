@@ -12,22 +12,11 @@ author = "agent"
 
 [[workflows.workflow.tasks]]
 task = "workflow.run"
-args = "Python Runner"
+args = "Python Runner-GUI"
 
 [[workflows.workflow.tasks]]
 task = "workflow.run"
-args = "Python Runner-GUI"
-
-[[workflows.workflow]]
-name = "Python Runner"
-author = "agent"
-
-[[workflows.workflow.tasks]]
-task = "shell.exec"
-args = "python main.py"
-
-[workflows.workflow.metadata]
-outputType = "console"
+args = "Tkinter Test-GUI"
 
 [[workflows.workflow]]
 name = "Python Runner-GUI"
@@ -40,6 +29,17 @@ args = "python L13_ve_cw.py"
 [workflows.workflow.metadata]
 outputType = "vnc"
 
+[[workflows.workflow]]
+name = "Tkinter Test-GUI"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python tk_test.py"
+
+[workflows.workflow.metadata]
+outputType = "vnc"
+
 [nix]
 channel = "stable-25_05"
-packages = ["tk"]
+packages = ["tk", "xorg.libX11", "xorg.libXext", "xorg.libXrender", "xorg.libXinerama", "xorg.libXcursor", "xorg.libXrandr", "xorg.libXfixes", "xorg.libXft"]
