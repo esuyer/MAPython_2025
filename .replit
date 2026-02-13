@@ -42,4 +42,4 @@ outputType = "vnc"
 
 [nix]
 channel = "stable-25_05"
-packages = ["tk", "xorg.libX11"]
+packages = ["tk", "xorg.libX11", "python311Full"]
