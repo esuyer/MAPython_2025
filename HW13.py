@@ -1,5 +1,5 @@
 import random
-
+print()
 print("Problem 1")
 print()
 colors = []
