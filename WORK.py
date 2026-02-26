@@ -1,3 +1,4 @@
+
 print("Question 1\n")
 words = ["hello", "world", "python", "jam"]
 def make_pairs(words):
