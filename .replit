@@ -32,7 +32,7 @@ outputType = "vnc"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "python Classwork.py"
+args = "python WORK.py"
 
 [[workflows.workflow]]
 name = "Tkinter Test"
