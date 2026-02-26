@@ -21,3 +21,15 @@ def run_classwork():
 
 if __name__ == "__main__":
     run_classwork()
+
+sp = 4
+pens=[]
+for i in range(sp):
+  p = turtle.Pen()
+  p.pencolor("green")
+  p.pensize(2)
+  pens.append(p)
+for i in range(pens):
+  p.forward(100)
+  
+  

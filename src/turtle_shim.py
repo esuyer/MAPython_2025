@@ -13,6 +13,7 @@ class TurtleShim(ModuleType):
         super().__init__('turtle')
         self.Screen = self._Screen
         self.Turtle = self._Turtle
+        self.Pen = self._Turtle
         self.done = self._done
         self.exitonclick = self._done
         self.setup = lambda **kwargs: None
@@ -28,6 +29,13 @@ class TurtleShim(ModuleType):
         self.goto = self._goto
         self.pencolor = self._color
         self.circle = self._circle
+        self.shape = lambda *args: None
+        self.width = lambda *args: None
+        self.pensize = lambda *args: None
+        self.begin_fill = lambda: None
+        self.end_fill = lambda: None
+        self.hideturtle = lambda: None
+        self.showturtle = lambda: None
         
         # Internal state
         self._pos = [400, 300]
@@ -85,7 +93,6 @@ class TurtleShim(ModuleType):
         self._angle -= a
         
     def _circle(self, radius, extent=None, steps=None):
-        # Very basic circle approximation
         center = [self._pos[0], self._pos[1]]
         if self._drawing:
             self._points.append(("circle", list(center), radius, self._current_color))

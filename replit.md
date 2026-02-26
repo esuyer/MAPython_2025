@@ -1,29 +1,16 @@
 # Python Environment Project
 
 ## Overview
-A simple Python development environment for writing and running Python code. The project provides a clean workspace with Python 3.11 and a basic structure for development.
-
-## Current State
-- Python 3.11 installed and configured
-- Basic main.py file with example code
-- Workflow configured to run Python scripts
-- Console output enabled for testing and debugging
-
-## Project Structure
-- `main.py` - Main Python file for writing and running code
-- Python Runner workflow - Automatically executes the main.py file
-
-## Recent Changes
-- 2025-09-14: Initial setup completed
-  - Installed Python 3.11
-  - Created basic main.py with sample code
-  - Configured Python Runner workflow
-
-## User Preferences
-- Prefers simple, direct Python environment
-- Wants to focus on writing code without complex setup
+A graphical development environment using Pygame to emulate standard libraries like Turtle.
 
 ## Architecture
-- Single-file Python application structure
-- Console-based output for simplicity
-- Ready for expansion with additional Python modules or libraries as needed
+- `main.py`: FNAF jumpscare simulator
+- `doom.py`: FPS game using pygame.Vector2 for math
+- `HW8.py`: Side-scrolling obstacle game
+- `Classwork.py`: Turtle-based classwork (using Pygame shim)
+- `src/turtle_shim.py`: Pygame-based shim for `turtle` and `tkinter` to bypass missing system dependencies.
+
+## Recent Changes
+- Implemented `src/turtle_shim.py` to provide `turtle` functionality without `_tkinter`.
+- Updated `Classwork.py` to use the shim.
+- Configured audio driver fix for all graphical scripts.
