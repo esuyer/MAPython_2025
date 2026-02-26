@@ -18,6 +18,9 @@ A simple Python development environment for writing and running Python code. The
   - Installed Python 3.11
   - Created basic main.py with sample code
   - Configured Python Runner workflow
+- 2025-09-15: Configured Python for Tkinter
+  - Installed Tkinter package
+  - Created tkinter_test.py for verification
 
 ## User Preferences
 - Prefers simple, direct Python environment
