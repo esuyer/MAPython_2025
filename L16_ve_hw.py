@@ -2,7 +2,7 @@ def even_to_dot(g):
   new_st=""
   for i in range (len(g)):
       if i % 2==1:
-        new_st+="."
+        new_st+=""
       else:
         new_st+=g[i]
 
