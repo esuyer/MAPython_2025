@@ -1,17 +1,27 @@
 print("\nQuestion 1\n")
-def transform_text(text):
-    res = text.replace('a', 'z')
-    res = res.replace('A', 'z')
-    return res
-
-print(transform_text('pkAirea'))
-
+def aA_to_Z(aA_to_Z):
+  aA_to_Z= ('pkAirea')
+  aA_to_Z = aA_to_Z.replace('a', 'z')
+  aA_to_Z = aA_to_Z.replace('A', 'z')
+  return aA_to_Z
+print(aA_to_Z(aA_to_Z))
 print("\nQuestion 2\n")
-k_text = "Kazuya_Mishima_Wins"
-k_list = list(k_text)
-
-for i in range(len(k_list)):
-    if i % 2 == 0:
-        k_list[i] = "."
-
-print("".join(k_list))
+K= ("Kazuya Mishima Wins!!")
+def K1(K):
+  i = 0
+  result=""
+  for letter in K:
+     if i %2 == 0:
+       result += "."
+     else:
+       result += letter
+  i += 1
+  return result
+print(K1(K))
+print("\nQuestion 3\n")
+def del_aA(del_aA):
+  del_aA= ('pkAFirea')
+  del_aA = del_aA.removesuffix('a')
+  del_aA = del_aA.removesuffix('A')
+  return del_aA
+print(del_aA(del_aA))
