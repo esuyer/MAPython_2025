@@ -1,6 +1,6 @@
 W = input("Enter a word: ")
 for letter in W:
   if letter == 'a':
-    print(letter)
+    list.append("z")
   elif  letter == 'A':
-    print(letter)
+    list.append("Z")
