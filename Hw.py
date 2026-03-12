@@ -1,52 +1,58 @@
-word = input("Give me a word: ")
-if word[0].lower() == word[-1].lower():
-    print("Starts and ends with the same letter", word[0].lower())
-else:
-    print("Starts and ends with different letters")
-print(word.upper())
+import random
+i = 10
+while i <= 100:
+    print(i)
+    i += 5
 
-c1 = input("Give me a single character: ")
-c2 = input("Give me another single character: ")
-if c1 == c2:
-    print("That is the same character")
-elif c1 < c2:
-    print(c1, "comes before", c2)
-else:
-    print(c2, "comes before", c1)
+a = int(input("Give me an integer: "))
+b = int(input("Give me a smaller integer: "))
+while a >= b:
+    print(a)
+    a -= 1
 
-def vowels_to_pluses(S):
+total = 0
+print("total=", total)
+while total <= 50:
+    n = int(input("Give me a number and I will add it to the total: "))
+    total += n
+    print("total=", total)
+    if total > 50:
+        print("That was over 50, too hard. Stopping now!")
+
+def swap_ao(S):
     result = ""
     for ch in S:
-        if ch in "aeiouAEIOU":
-            result += "+"
+        if ch == "a":
+            result += "o"
+        elif ch == "o":
+            result += "a"
         else:
             result += ch
     return result
 
-def double_letters(S):
+def add_dots(S):
     result = ""
     for ch in S:
-        result += ch + ch
+        result += "." + ch
     return result
 
-def remove_even(S):
-    result = ""
-    for i in range(len(S)):
-        if i % 2 == 0:
-            result += S[i]
-    return result
+print(swap_ao("baobab"))
+print(add_dots("dots"))
 
-def case(S):
-    if S.isupper():
-        print("All uppercase")
-    elif S.islower():
-        print("All lowercase")
-    else:
-        print("Mix")
 
-S = input("Give me a string: ")
+while True:
+    r = random.randint(1,6)
+    print("Rolled:", r)
+    if r > 4:
+        break
 
-print(vowels_to_pluses(S))
-print(double_letters(S))
-print(remove_even(S))
-case(S)
+total = 0
+print("total weight =", total)
+while True:
+    w = int(input("What is the weight of the next item to pack? "))
+    if total + w > 25:
+        print("That would be over the limit of 25 lbs, can't add that. Stopping now!")
+        break
+    total += w
+    print("Item added. Total weight =", total)
+print("Your final suitcase weight =", total)

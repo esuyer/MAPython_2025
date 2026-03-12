@@ -1,76 +1,81 @@
 print("Question 1\n")
-a = input("Type anything: ")
-a = a.replace("a", "z")
-a = a.replace("A", "z")
-print(a)
+a = 0
+b = 5
+c = 5
+while a <= 10:
+    print(a)
+    a = a + 1
 print("\nQuestion 2\n")
-c = input("Type anything: ")
-def even_to_dot(c):
-  result = ""
-  i = 0
-  for letter in c:
-      if i % 2 == 0:
-          result += "."
-      else:
-          result += letter
-      i += 1
-  return result
-print(even_to_dot(c))
+while b <= 12:
+   print(b)
+   b = b + 1
 print("\nQuestion 3\n")
-d = input("Type anything: ")
-def remove_aA(d):
-         result = ""
-         for letter in d:
-             if letter != "a" and letter != "A":
-                 result += letter
-         return result
-print(remove_aA(d))
+while c >= -5:
+   print(c)
+   c = c - 1
 print("\nQuestion 4\n")
-e = input("Type anything: ")
-def upper_lower(e):
-  result = ""
-  for i in range(len(e)):
-      if i % 2 == 0:
-          result += e[i].upper()
-      else:
-          result += e[i].lower()
-  return result
-print(upper_lower(e))
+d = int(input("Give me a number less than 50: "))
+while d <= 50:
+   print(d)
+   d = d + 2
 print("\nQuestion 5\n")
-f = input("Type anything: ")
-def before_m(f):
-  result = ""
-  for letter in f:
-      if letter >= "m":
-          result += letter
-  return result
-print(before_m(f))
+e = int(input("Give me a positive number: "))
+while e > 0:
+   print(e)
+   e = e - 3
 print("\nQuestion 6\n")
-S = input("Type anything: ")
-N = int(input("Type a number: "))
-def up_at_pos(S, N):
-    result = ""
-    for i in range(len(S)):
-        if i == N:
-            result += S[i].upper()
-        else:
-            result += S[i].lower()
-    return result
-print(up_at_pos(S, N))
+f = int(input("Give me a number: "))
+g = int(input("Give me a bigger number: "))
+while f < g:
+   print(f)
+   f = f + 1
 print("\nQuestion 7\n")
-i1 = input("Type anything: ")
-j = int(input("Type a number: "))
-def mul_str(i1, j):
-  result = ""
-  for i in range(j):
-      result += i1
-  return result
-print(mul_str(i1, j))
+words = ['head', 'body', 'tail']
+print(words)
+g = 0
+while g < len(words):
+    print(words[g])
+    g += 1
 print("\nQuestion 8\n")
-k = input("Type anything: ")
-def reverse(k):
-  result = ""
-  for letter in k:
-      result = letter + result
-  return result
-print(reverse(k))
+print(words)
+h = len(words)
+while h > 0:
+    h -= 1
+    print(words[h])
+print("\nQuestion 9\n")
+i = int(input("Give me a positive integer: "))
+j = 1
+while j * j < i:
+    print(j * j)
+    j += 1
+print("\nQuestion 10\n")
+k = int(input("Give me a positive integer: "))
+ll = 1
+while 2 ** ll < k:
+    print(2 ** ll)
+    ll += 1
+print("\nQuestion 11\n")
+m = int(input("Give me an integer: "))
+n = 0
+o = 1
+p = 0
+q = 0
+while n <= m:
+    p = n
+    q = o - 1
+    n += o
+    o += 1
+print("First sum over the limit:", n)
+print("Last sum not over the limit:", p)
+print("Last number added:", q)
+print("\nQuestion 12\n")
+r = int(input("Give me a positive integer: "))
+def smallest_div(r):
+    s = 2
+    while s <= r:
+        if r % s == 0:
+            return s
+        s += 1
+print(smallest_div(17))
+print(smallest_div(123456))
+print(smallest_div(35))
