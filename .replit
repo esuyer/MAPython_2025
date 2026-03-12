@@ -43,3 +43,7 @@ outputType = "vnc"
 [nix]
 channel = "stable-25_05"
 packages = ["tk", "xorg.libX11", "xorg.libXext", "xorg.libXrender", "xorg.libXinerama", "xorg.libXcursor", "xorg.libXrandr", "xorg.libXfixes", "xorg.libXft", "python3Full"]
+
+[[ports]]
+localPort = 5904
+externalPort = 80
