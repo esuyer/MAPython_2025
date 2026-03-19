@@ -1,81 +1,74 @@
-print("Question 1\n")
-a = 0
-b = 5
-c = 5
-while a <= 10:
-    print(a)
-    a = a + 1
-print("\nQuestion 2\n")
-while b <= 12:
-   print(b)
-   b = b + 1
-print("\nQuestion 3\n")
-while c >= -5:
-   print(c)
-   c = c - 1
-print("\nQuestion 4\n")
-d = int(input("Give me a number less than 50: "))
-while d <= 50:
-   print(d)
-   d = d + 2
-print("\nQuestion 5\n")
-e = int(input("Give me a positive number: "))
-while e > 0:
-   print(e)
-   e = e - 3
-print("\nQuestion 6\n")
-f = int(input("Give me a number: "))
-g = int(input("Give me a bigger number: "))
-while f < g:
-   print(f)
-   f = f + 1
-print("\nQuestion 7\n")
-words = ['head', 'body', 'tail']
-print(words)
-g = 0
-while g < len(words):
-    print(words[g])
-    g += 1
-print("\nQuestion 8\n")
-print(words)
-h = len(words)
-while h > 0:
-    h -= 1
-    print(words[h])
-print("\nQuestion 9\n")
-i = int(input("Give me a positive integer: "))
-j = 1
-while j * j < i:
-    print(j * j)
-    j += 1
-print("\nQuestion 10\n")
-k = int(input("Give me a positive integer: "))
-ll = 1
-while 2 ** ll < k:
-    print(2 ** ll)
-    ll += 1
-print("\nQuestion 11\n")
-m = int(input("Give me an integer: "))
-n = 0
-o = 1
-p = 0
-q = 0
-while n <= m:
-    p = n
-    q = o - 1
-    n += o
-    o += 1
-print("First sum over the limit:", n)
-print("Last sum not over the limit:", p)
-print("Last number added:", q)
-print("\nQuestion 12\n")
-r = int(input("Give me a positive integer: "))
-def smallest_div(r):
-    s = 2
-    while s <= r:
-        if r % s == 0:
-            return s
-        s += 1
-print(smallest_div(17))
-print(smallest_div(123456))
-print(smallest_div(35))
+import random
+
+# Problem 1
+def after3_encode(message):
+    encoded = ""
+    count = 0
+
+    for ch in message:
+        encoded += ch
+        count += 1
+
+        if count % 3 == 0:
+            encoded += "the"
+
+    return encoded
+
+
+# Problem 2
+def after3_random_encode(message):
+    words = ["the", "cat", "was", "fat", "sun", "sky", "dog"]
+    encoded = ""
+    count = 0
+
+    for ch in message:
+        encoded += ch
+        count += 1
+
+        if count % 3 == 0:
+            encoded += random.choice(words)
+
+    return encoded
+
+
+# Problem 3
+def split_encode(message):
+    even = ""
+    odd = ""
+
+    for i in range(len(message)):
+        if i % 2 == 0:
+            even += message[i]
+        else:
+            odd += message[i]
+
+    return even + odd
+
+
+# Problem 4
+def flip_encode(message):
+    if len(message) % 2 != 0:
+        return "Error: message must have even length."
+
+    encoded = ""
+
+    for i in range(0, len(message), 2):
+        encoded += message[i+1] + message[i]
+
+    return encoded
+
+
+# Ask user for a message
+msg = input("Enter a message: ")
+
+print("\nProblem 1 result:")
+print(after3_encode(msg))
+
+print("\nProblem 2 result:")
+print(after3_random_encode(msg))
+
+print("\nProblem 3 result:")
+print(split_encode(msg))
+
+print("\nProblem 4 result:")
+print(flip_encode(msg))
