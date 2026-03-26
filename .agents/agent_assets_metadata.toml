@@ -1,0 +1,8 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "2oTsgqdMMsIz1yNZXQm1f"
+uri = "file://kahoot_quiz_L17_L20.csv"
+type = "table"
+title = "Kahoot Quiz - L17 to L20 (30 Questions)"

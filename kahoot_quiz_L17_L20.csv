@@ -1,0 +1,31 @@
+Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit (sec),Correct answer(s)
+"(L17) What does 'i += 1' do inside a while loop?","Resets i to 0","Multiplies i by 1","Increases i by 1","Decreases i by 1",20,3
+"(L17) Which condition prints integers from 5 down to -5?","while i <= 5","while i >= -5","while i > -5","while i < 5",20,2
+"(L17) What is the output of: i=0; while i<=3: print(i); i+=1","0 1 2","1 2 3","0 1 2 3","0 1 2 3 4",20,3
+"(L17) To skip count by 2 in a while loop, which statement do you use?","i += 1","i *= 2","i += 2","i -= 2",20,3
+"(L17) To loop through a list using a while loop, what should the starting index be?","1","len(words)","len(words) - 1","0",20,4
+"(L17) To loop a list BACKWARDS with a while loop, what should the starting index be?","0","len(words)","len(words) - 1","-1",20,3
+"(L17) Which code prints all powers of 2 less than N?","while 2*i < N: print(2*i); i+=1","while 2**i < N: print(2**i); i+=1","while i**2 < N: print(i**2); i+=1","while i < N: print(2**i); i+=1",20,2
+"(L17) In Problem 12 (smallest_div), why does the loop start i at 2?","Because 1 is not considered a divisor","Because 0 causes an error","Because 2 is the smallest number","Because of the while condition",20,1
+"(L17) What does 'while i * i < num' check in the Squares problem?","If i squared is greater than num","If i squared equals num","If i squared is less than num","If i is a square number",20,3
+"(L17) In Problem 6 (from a to b), why is a incremented BEFORE printing?","To skip printing a","To print all numbers including a","To print numbers from a+1 to b inclusive","To avoid an infinite loop",20,3
+"(L18) What does 'letter.isupper()' return?","True if the letter is lowercase","True if the letter is uppercase","The uppercase version of the letter","True if the letter is a number",20,2
+"(L18) What does 'alphabet.index(letter.lower())' do?","Converts the letter to lowercase","Finds the position of the letter in the alphabet list","Returns the letter at that index","Removes the letter from the alphabet",20,2
+"(L18) In the encode function, what does 'continue' do when a space is found?","Stops the loop","Prints a space","Skips the rest of the loop body and moves to the next letter","Adds an extra space",20,3
+"(L18) If pos = 24 and shift = 5 and len(alphabet) = 26, what is the final adjusted pos?","29","3","5","1",20,2
+"(L18) What is the purpose of 'pos = pos - len(alphabet)' in the encode function?","To reverse the shift","To wrap around to the beginning of the alphabet","To stop the loop","To convert to uppercase",20,2
+"(L19) How do you check if a number is a multiple of 7?","num / 7 == 0","num % 7 == 0","num * 7 == 0","num // 7 == 0",20,2
+"(L19) What is the output of find(['dog','python','cat','zebra','cat','mouse'], 'cat')?","0","4","2","1",20,3
+"(L19) What does right_find return if the value is NOT found in the list?","-1","0","None","False",20,1
+"(L19) To find the smallest number in a list, what should 'smallest' be initialized to?","0","The last element","The first element","The largest possible number",20,3
+"(L19) How do you check if the first character of a string 'i' is the letter 'a'?","i == 'a'","i.first() == 'a'","i[0] == 'a'","i[-1] == 'a'",20,3
+"(L19) In Problem 5, what does 'longest = len(words[0])' initialize?","The longest word","The length of the first word","The first word","The length of the last word",20,2
+"(L19) In right_find, which range correctly searches a list from right to left?","range(0, len(list))","range(len(list), 0)","range(len(list)-1, -1, -1)","range(len(list)-1, 0, -1)",20,3
+"(L20) In the bananas function, how do you change an element in list L1 at position i?","L1.add('bananas')","L1.append('bananas')","L1[i] = 'bananas'","L1.replace(i, 'bananas')",20,3
+"(L20) What does num[-1] refer to in a list?","The second-to-last element","An error","The last element","The first element",20,3
+"(L20) What does chr(64 + 1) return in Python?","'a'","'1'","'A'","'B'",20,3
+"(L20) What does 'word[i:] + word[:i]' do to a string?","Reverses the word","Repeats the word","Rotates the word by i positions","Splits the word in half",20,3
+"(L20) What does the string method 'isdigit()' check?","If the string contains only letters","If the string is empty","If the character is a digit 0-9","If the string is a number greater than 0",20,3
+"(L20) In from_first(['hive','emu','life','lime','open']), what is returned?","'hello'","'helo'","'helllo'","'help'",20,1
+"(L20) Which of these makes a word 'interesting' in the is_interesting function?","It contains the letter 'z'","It has more than 5 letters","It starts and ends with the same letter","It is all uppercase",20,3
+"(L20) In the potion brewing problem, why is '// or /' not used?","They are too slow","The problem requires using a while loop instead","They don't work with integers","They would give the wrong answer",20,2
