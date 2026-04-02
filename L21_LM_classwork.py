@@ -13,13 +13,14 @@ colors = ["red", "blue", "green", "orange", "purple", "pink", "yellow", "cyan", 
 
 def draw_square(x, y):
     color = random.choice(colors)
+    size = random.randint(20, 100)
     t.penup()
     t.goto(x, y)
     t.pendown()
     t.fillcolor(color)
     t.begin_fill()
     for _ in range(4):
-        t.forward(50)
+        t.forward(size)
         t.right(90)
     t.end_fill()
 
