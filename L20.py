@@ -10,7 +10,7 @@ After: [9, 9, 9, 9]
 Reminder: use [] notation to change an element of a list.
 """
 print ("Problem 1")
-num = [1, 2, 3]
+num = [9, 11, 4, 5]
 if num[0] > num[-1]:
     for i in range(len(num)):
         num[i] = num[0]
