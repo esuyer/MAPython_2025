@@ -6,3 +6,9 @@ id = "2oTsgqdMMsIz1yNZXQm1f"
 uri = "file://kahoot_quiz_L17_L20.csv"
 type = "table"
 title = "Kahoot Quiz - L17 to L20 (30 Questions)"
+
+[[outputs]]
+id = "bSmCkGvHuU9G5VJ1Tyn9H"
+uri = "file://kahoot_quiz_mouse_click.csv"
+type = "table"
+title = "Kahoot Quiz - Mouse Click in Python (10 Questions)"

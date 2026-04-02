@@ -1,6 +1,8 @@
 import turtle, random
 
 turtle.setup(600, 400)
+turtle.clearscreen()
+
 
 # Create a turtle object
 #t = turtle.Turtle()
@@ -63,10 +65,28 @@ turtle.setup function. For example, if the canvas is set up using turtle.setup(6
 its width is 600 pixels, and its height is 400 pixels.
 Reminder: the center of the coordinates (0, 0) is in the in the center of the canvas.
 """
+print ("Problem 2")
+def draw_lines(x, y):
+    t = turtle.Turtle()
+    t.speed(2)
+    t.penup()
+    t.goto(x, y)
+    t.pendown()
+    t.color(random.choice(["red", "blue", "green", "yellow", "orange", "purple"]))
+    t.goto(300, 200)
+    t.goto(-300, 200)
+    t.goto(-300, -200)
+    t.goto(300, -200)
+    t.goto(x, y)
+
+turtle.onscreenclick(draw_lines, 3)
+
+
 
 """
 Problem 3. Flowers on click
-1). Write a program that draws a flower when the left mouse button is clicked. The center of the flower
+1). Write a program that d
+raws a flower when the left mouse button is clicked. The center of the flower
 should be at the location of the click.
 
 This flower has 10 “petals”. Each petal is a line that has a length of 20.
@@ -109,6 +129,24 @@ y-axis, and with respect to the center of coordinates.
 move)
 
 """
+print ("Problem 3")
+def draw_flower(x, y):
+    t = turtle.Turtle()
+    t.speed(2)
+    t.penup()
+    t.goto(x, y)
+    t.pendown()
+    t.color(random.choice(["red", "blue", "green", "yellow", "orange", "purple"]))
+    for i in range(10):
+        t.forward(20)
+        t.backward(20)
+        t.right(36)
+
+    t.hideturtle()
+
+turtle.onscreenclick(draw_flower, 1)
+
+  
 
 # Create a mouse click event
 turtle.mainloop()

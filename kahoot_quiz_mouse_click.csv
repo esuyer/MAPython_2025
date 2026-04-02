@@ -1,0 +1,11 @@
+Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit (sec),Correct answer(s)
+"Which function registers a mouse click event in Python turtle?","turtle.onclick()","turtle.onscreenclick()","turtle.mouseclick()","turtle.listen()",20,2
+"A callback function for mouse clicks must have which two parameters?","(color, size)","(button, click)","(x, y)","(width, height)",20,3
+"Which button number represents a LEFT mouse click in turtle.onscreenclick()?","2","3","0","1",20,4
+"Which button number represents a RIGHT mouse click in turtle.onscreenclick()?","3","1","2","4",20,1
+"In draw_square(x, y), why is t.penup() called before t.goto(x, y)?","To erase previous drawings","To move the turtle without drawing a line","To speed up the turtle","To change the turtle color",20,2
+"What does turtle.mainloop() do at the end of the program?","Clears the screen","Stops the program","Keeps the window open and listens for mouse events","Draws a loop shape",20,3
+"In turtle.setup(600, 400), what are the coordinates of the top-right corner?","(600, 400)","(300, 200)","(400, 600)","(0, 0)",20,2
+"What does random.choice(['red','blue','green']) do?","Returns all colors","Returns a random color from the list","Returns the first color","Returns 'red' always",20,2
+"In draw_flower(x, y), the turtle draws 10 petals. After each petal it calls t.backward(20). Why?","To move to the next petal position","To return to the center of the flower","To erase the petal","To change direction",20,2
+"What does t.begin_fill() and t.end_fill() do in draw_square?","Outlines the shape in black","Fills the drawn shape with the current color","Clears the shape","Changes the background color",20,2
