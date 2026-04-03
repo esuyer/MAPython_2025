@@ -1,11 +1,16 @@
-def from_first(words):
-    result = ""
-    for word in words:
-        result = result + word[0]
-    return result
+def is_interesting(word):
+  lower = word.lower()
+  if lower == "interesting":
+    return True
+  if "x" in lower and "y" in lower:
+    return True
+  if lower[0] == lower[-1]:
+    return True
+  return False
 
-word1 = input("Enter first word: ")
-word2 = input("Enter second word: ")
-word3 = input("Enter third word: ")
-
-print(from_first([word1, word2, word3]))
+print(is_interesting("Interesting"))
+print(is_interesting("INTERESTING"))
+print(is_interesting("foxy"))
+print(is_interesting("level"))
+print(is_interesting("python"))
+print(is_interesting("xylophone"))
