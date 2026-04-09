@@ -9,8 +9,6 @@ mike = turtle.Turtle()
 mike.speed(0)
 mike.width(1)
 
-# Step 1 - Arrow key movement
-
 def move_left():
     mike.setheading(180)
     mike.forward(5)
@@ -26,8 +24,6 @@ def move_up():
 def move_down():
     mike.setheading(270)
     mike.forward(5)
-
-# Step 2 - Color keys
 
 def set_red():
     mike.pencolor("red")
@@ -51,6 +47,11 @@ def increase_width():
     if current < 20:
         mike.width(current + 1)
 
+def decrease_width():
+    current = mike.width()
+    if current > 1:
+        mike.width(current - 1)
+
 # Bind keys
 screen.listen()
 
@@ -66,5 +67,6 @@ screen.onkeypress(set_blue, "b")
 screen.onkeypress(set_random_color, "c")
 
 screen.onkeypress(increase_width, "z")
+screen.onkeypress(decrease_width, "x")
 
 screen.mainloop()
