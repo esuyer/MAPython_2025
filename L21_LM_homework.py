@@ -1,6 +1,6 @@
 import turtle
 import random
-
+print("Question 1\n")
 screen = turtle.Screen()
 screen.title("Click to Draw Triangles")
 screen.bgcolor("white")
@@ -26,3 +26,4 @@ def draw_triangle(x, y):
 
 screen.onclick(draw_triangle)
 screen.mainloop()
+print("\nQuestion 2\n")
