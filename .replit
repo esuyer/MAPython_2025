@@ -23,7 +23,7 @@ outputType = "vnc"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "python L21_LM_homework.py"
+args = "python L22_LM_classwork.py"
 
 [nix]
 channel = "stable-25_05"
