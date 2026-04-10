@@ -48,6 +48,9 @@ def decrease_width():
     if current > 1:
         mike.width(current - 1)
 
+def clear_screen():
+    mike.clear()
+
 def toggle_pen():
     if mike.isdown():
         mike.penup()
@@ -68,4 +71,5 @@ screen.onkeypress(set_random_color, "c")
 screen.onkeypress(increase_width, "z")
 screen.onkeypress(decrease_width, "x")
 screen.onkeypress(toggle_pen, "space")
+screen.onkeypress(clear_screen, "Delete")
 screen.mainloop()
