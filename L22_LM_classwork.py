@@ -34,13 +34,9 @@ def set_green():
 def set_blue():
     mike.pencolor("blue")
 
-# Step 3 - Random color
-
 def set_random_color():
     colors = ["red", "blue", "green", "orange", "purple", "pink", "yellow", "cyan", "magenta", "coral"]
     mike.pencolor(random.choice(colors))
-
-# Step 4a - Increase pen width
 
 def increase_width():
     current = mike.width()
@@ -52,21 +48,24 @@ def decrease_width():
     if current > 1:
         mike.width(current - 1)
 
-# Bind keys
-screen.listen()
+def toggle_pen():
+    if mike.isdown():
+        mike.penup()
+        mike.shape("classic")
+    else:
+        mike.pendown()
+        mike.shape("turtle")
 
+screen.listen()
 screen.onkeypress(move_left, "Left")
 screen.onkeypress(move_right, "Right")
 screen.onkeypress(move_up, "Up")
 screen.onkeypress(move_down, "Down")
-
 screen.onkeypress(set_red, "r")
 screen.onkeypress(set_green, "g")
 screen.onkeypress(set_blue, "b")
-
 screen.onkeypress(set_random_color, "c")
-
 screen.onkeypress(increase_width, "z")
 screen.onkeypress(decrease_width, "x")
-
+screen.onkeypress(toggle_pen, "space")
 screen.mainloop()
