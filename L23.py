@@ -177,7 +177,92 @@ def change_color(x, y):
    screen.bgcolor(r, g, b)
 
 screen.onclick(change_color)
-screen.mainloop()
+#screen.mainloop()
 
+"""
+Weight inspection
+You are a worker at a candy factory. Your job today is to check that all packages of candy
+from a box have the same weight. You are given a list of readings from an electronic scale –
+package weights. Print &#39;Pass&#39; if all the packages have the same weight and &#39;Fail&#39;
+otherwise.
+Examples:
+same_weight([10, 10, 13, 13])  Fail
+same_weight([10, 10, 10, 10, 9])  Fail
+same_weight([15, 15, 15])  Pass
+"""
+print ("weight inspection")
+def same_weight(weights):
+    if len(set(weights)) == 1:
+        print("Pass")
+        return True
+
+    print("Fail")
+    return False
+
+same_weight([10, 10, 13, 13])
+same_weight([10, 10, 10, 10, 9])
+same_weight([15, 15, 15])
+
+"""
+Number issue
+Joe wrote several numbers on the board and said that they are in increasing order
+(each number is smaller than the next one). Bob disagrees. Help the boys settle the
+issue.
+Write a function with 1 parameter: a list of numbers that Joe wrote on the board.
+This function should print &#39;Joe&#39; if Joe is right. Otherwise, it should print &#39;Bob&#39;.
+Examples:
+number_issue([5, 6, 6, 10])  Bob
+number_issue([10, 100, 3000])  Joe
+number_issue([1, 2, 3, 4, 2])  Bob
+Tip: either search or counting algorithms can be used here.
+"""
+print ("number issue")
+def number_issue(numbers):
+    for i in range(len(numbers) - 1):
+        if numbers[i] >= numbers[i + 1]:
+            print("Bob")
+            return False
+    print("Joe")
+    return True
+
+number_issue([5, 6, 6, 10])
+number_issue([10, 100, 3000])
+number_issue([1, 2, 3, 4, 2])
+
+
+"""
+Peaks (Challenge)
+We will call a value in a list a “peak” if it is bigger than both of its neighbors.
+For example, in the list [2, 1, 4, 3] there is 1 “peak” value: 4.
+Write a function with 1 parameter: a list of numbers. It should print all the “peak” values in the list and
+print how many “peaks” there are in the list.
+Examples:
+List Output
+[10, 20] Number of peaks: 0
+[-3, 13, 2, 14] Peak values:
+
+13
+Number of peaks: 1
+[50, 1, 30, 2, 10, 15, 7] Peak values:
+
+30
+15
+Number of peaks: 2
+
+"""
+print ("peaks")
+def peaks(numbers):
+   peak_values = []
+   for i in range(1, len(numbers) - 1):
+       if numbers[i] > numbers[i - 1] and numbers[i] > numbers[i + 1]:
+           peak_values.append(numbers[i])
+   print("Peak values:")
+   for value in peak_values:
+       print(value)
+   print(f"Number of peaks: {len(peak_values)}")  
+  
+peaks([10, 20])
+peaks([-3, 13, 2, 14])
+peaks([50, 1, 30, 2, 10, 15, 7])
 
 
