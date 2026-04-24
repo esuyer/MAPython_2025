@@ -1,21 +1,30 @@
 import turtle
 
 screen = turtle.Screen()
-screen.title("Click Counter")
+screen.title("Color Cycle Circle")
 screen.bgcolor("white")
 
-writer = turtle.Turtle()
-writer.hideturtle()
-writer.penup()
+colors = ["red", "orange", "yellow", "green", "blue", "purple"]
+index = 0
 
-counter = 0
+t = turtle.Turtle()
+t.hideturtle()
+t.penup()
+t.goto(0, -50)
+t.pendown()
+t.fillcolor(colors[index])
+t.begin_fill()
+t.circle(50)
+t.end_fill()
 
-def count_click(x, y):
-    global counter
-    counter += 1
-    writer.clear()
-    writer.goto(0, 0)
-    writer.write(counter, align="center", font=("Arial", 30, "bold"))
+def change_color(x, y):
+    global index
+    index = (index + 1) % len(colors)
+    t.clear()
+    t.fillcolor(colors[index])
+    t.begin_fill()
+    t.circle(50)
+    t.end_fill()
 
-screen.onclick(count_click)
+screen.onclick(change_color)
 screen.mainloop()
