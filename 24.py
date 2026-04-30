@@ -6,5 +6,12 @@ poll = {
   'pig': 5
 }
 
-poll['hamster'] = 30
+poll['hampster'] = 30
+print(poll)
+
+poll['hampster'] = 35
+print(poll)
+
+Pig = input('how many new votes did the pig get?')
+poll['pig'] += int(Pig)
 print(poll)
