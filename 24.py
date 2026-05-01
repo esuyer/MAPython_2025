@@ -18,3 +18,6 @@ print(poll)
 
 for key in poll:
  print(key)
+
+for value in poll.values():
+  print(value)
