@@ -15,3 +15,6 @@ print(poll)
 Pig = input('how many new votes did the pig get?')
 poll['pig'] += int(Pig)
 print(poll)
+
+for key in poll:
+ print(key)
