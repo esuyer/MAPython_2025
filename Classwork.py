@@ -4,10 +4,10 @@ pets= {"Cat": 100,
       "Fish":10,
       "Pig":5}
 print(pets)
-pets["Hampster"] = "35"
+pets["Hampster"] = 35
 print(pets)
 a = int(input("How many more votes did the pig get?: "))
-pets["Pig"] = str(int(pets["Pig"]) + a)
+pets["Pig"] = pets["Pig"] + a
 print(pets)
 for key in pets:
   print(key)
