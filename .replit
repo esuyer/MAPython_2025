@@ -18,12 +18,12 @@ args = "Python Runner"
 name = "Python Runner"
 author = "agent"
 
-[workflows.workflow.metadata]
-outputType = "vnc"
-
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "python L23_LM_homework.py"
+args = "python L24_LM_homework.py"
+
+[workflows.workflow.metadata]
+outputType = "vnc"
 
 [nix]
 channel = "stable-25_05"
