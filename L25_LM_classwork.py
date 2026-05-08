@@ -1,8 +1,7 @@
-print("Question 1")
+print("Question 1\n")
 names_input = input("Enter names separated by spaces: ")
 names = names_input.split(" ")
 print(names)
-
 if len(names) >= 2:
     if names[1] == "Bob":
         print("The second name is Bob")
@@ -11,9 +10,19 @@ if len(names) >= 2:
 else:
     print("There is no second name")
 
-print("\nQuestion 2")
+print("\nQuestion 2\n")
 nums_input = input("Enter integers separated by commas: ")
 nums = nums_input.split(",")
 print(nums)
 total = int(nums[0]) + int(nums[-1])
 print("Sum of first and last:", total)
+
+print("\nQuestion 3")
+def print_words(sentence):
+    words = sentence.split(" ")
+    print("Number of words:", len(words))
+    for word in words:
+        print(word)
+
+sentence = input("Enter words separated by spaces: ")
+print_words(sentence)
