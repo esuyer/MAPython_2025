@@ -17,7 +17,7 @@ print(nums)
 total = int(nums[0]) + int(nums[-1])
 print("Sum of first and last:", total)
 
-print("\nQuestion 3")
+print("\nQuestion 3\n")
 def print_words(sentence):
     words = sentence.split(" ")
     print("Number of words:", len(words))
@@ -26,3 +26,10 @@ def print_words(sentence):
 
 sentence = input("Enter words separated by spaces: ")
 print_words(sentence)
+
+print("\nQuestion 4")
+nums_input = input("Enter integers separated by commas: ")
+nums = nums_input.split(",")
+for num in nums:
+    if int(num) < 10:
+        print(num)
