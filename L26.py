@@ -23,12 +23,17 @@ mike.goto(-200, 0)
 
 def move():
   x = mike.xcor()
-  turtle.write( + " ")
+  mike.clear()
+  mike.write(str(x) + "    ")
   mike.forward(5)
 
   if x > 200:
     mike.left(180)
-    mike.forward(5)
+    mike.forward(15)
+
+  if x < -200:
+    mike.right(180)
+    mike.forward(15)
 
   turtle.ontimer(move, 100)
 
