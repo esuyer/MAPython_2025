@@ -75,7 +75,7 @@ class Player:
         self.y=GROUND-40 if not self.flip else 40
         self.vy=0.0
         self.g=1.25 if not self.flip else -1.25
-        self.mode="cube"
+        self.mode="ship"
         self.rot=0
         self.on_ground=True
         self.wave_dir=1
@@ -122,7 +122,7 @@ class Player:
         trail.add(PLAYER_X+20,self.y+20)
     def draw(self):
         surf=pygame.Surface((40,40),pygame.SRCALPHA)
-        c={"cube":BLUE,"ship":YELLOW,"ball":GREEN,"ufo":PURPLE,"wave":CYAN,"robot":RED}[self.mode]
+        c={"ship":BLUE,"cube":YELLOW,"ball":GREEN,"ufo":PURPLE,"wave":CYAN,"robot":RED}[self.mode]
         if self.mode=="ship":
             pygame.draw.polygon(surf,c,[(0,40),(40,20),(0,0)])
         elif self.mode=="ball":
@@ -195,7 +195,7 @@ class Portal:
         return pygame.Rect(self.x-scroll,GROUND-90,40,90)
     def draw(self,scroll):
         cmap={"cube":BLUE,"ship":YELLOW,"ball":GREEN,"ufo":PURPLE,"wave":CYAN,"robot":RED}
-        pygame.draw.rect(screen,cmap[self.m],(self.x-scroll+camera.x,GROUND-90,40,90),3)
+        pygame.draw.rect(screen,cmap[self.m],(self.x-scroll+camera.x,GROUND-90,20,90),3)
 
 class Speed:
     def __init__(self,x,v):
