@@ -1,8 +1,9 @@
+import os
+os.environ['SDL_AUDIODRIVER'] = 'dummy'
 import pygame
 import sys
 import random
 import json
-import os
 pygame.init()
 
 W,H=1200,700
