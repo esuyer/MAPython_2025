@@ -1,7 +1,6 @@
-from ctypes.wintypes import HRGN
 import turtle
 import time
-from datetime import datetime
+from datetime import datetime, timedelta
 turtle.setup(600,400)
 turtle.mode("logo")
 #                  --Visuals--
@@ -42,7 +41,12 @@ hr = turtle.Turtle()
 hr.speed(0)
 hr.pendown()
 
-#digital = 
+digital = turtle.Turtle()
+digital.speed(0)
+digital.penup()
+digital.goto(0,-150)
+digital.pendown()
+digital.hideturtle()
 
 sec.pensize(1)
 sec.color("black")
@@ -61,11 +65,21 @@ hr.color("black")
 hr.seth((datetime.now().hour - 4) * 30)
 hr.fd(40)
 hr.bk(40)
+
+notice = turtle.Turtle()
+notice.speed(0)
+notice.penup()
+notice.goto(50,-150)
+notice.pendown()
+notice.hideturtle()
+notice.write("NOT EXACT!!! (like a second behind)")
 while True:
   now = datetime.now()
-  #                      --Hands--
+  now -= timedelta(hours=4)
+  
+  #                      --Hands + Digital --
   # --Hour--
-  if now.time().hour - 4 < datetime.now().time().hour - 4:
+  if now.time().hour < datetime.now().time().hour - 4:
     # --Clearing--
     hr.clear()
 
@@ -93,19 +107,18 @@ while True:
     # --Clearing--
     sec.clear()
     
-    print(now)
-    
     # --Drawing--
     sec.pensize(1)
     sec.color("black")
     sec.seth(now.time().second * 6)
     sec.fd(80)
     sec.bk(80)
+    
+    # --Digital--
+    digital.clear()
+    formatted_time = now.strftime("%H:%M:%S")
+    print(formatted_time)
+    digital.write(formatted_time, align="center")
+    
 
   #                   --Digital--
-  #now = datetime.now()
-  #now.hour -= 4
-  #formatted_time = now.strftime("%H:%M:%S")
-  
-  
-  
