@@ -1,6 +1,5 @@
-fruit = ["kiwi", "apple", "banana", "orange"]
-found = False
-for i in range(len(fruit)):
-   if fruit[i] == "apple":
-      found = True
-      print("Found apple at index", i)
+def factorial(n):
+  if n==1:
+    return 1
+  return n*factorial(n-1)
+print(factorial(5))
